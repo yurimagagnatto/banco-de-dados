@@ -1,4 +1,6 @@
-# Exercício 1
+# Exercício 2
+
+[VOLTAR](/readme.md)
 
 ## Estudo de Caso: Empresa de Streaming de Vídeos
 
@@ -7,3 +9,13 @@ Uma empresa de streaming de vídeos deseja aprimorar a experiência de seus clie
 ## Tarefa
 
 Crie um diagrama entidade-relacionamento para representar visualmente as entidades, atributos e relacionamentos mencionados acima.
+
+## Resposta
+
+Diagrama desenvolvido utilizando o BR Modelo:
+
+![Diagrama entidade-relacionamento](/imagens/exercicio-2-1.png)
+
+## Referências
+
+- [BR Modelo Web](www.brmodeloweb.com)
