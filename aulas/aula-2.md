@@ -6,6 +6,8 @@ Criada por Edgar Frank Codd em 1970.
 
 A abordagem da teoria relacional de banco de dados se concentra em melhorar a compreensão dos dados pelos usuários, apresentando o banco de dados como um conjunto de tabelas de duas dimensões organizadas em linhas e colunas.
 
+Uma tabela relacional é uma estruturação dos dados por assunto, organizada em tabelas com linhas e colunas, e cada linha é a representação de uma ocorrência de um objeto, um assunto, descrita por valores em cada coluna. 
+
 ## Premissas que definem uma tabela de dados
 
 - Cada tabela é chamada de relação.
@@ -44,9 +46,11 @@ A abordagem da teoria relacional de banco de dados se concentra em melhorar a co
 
 ## Chave primária
 
-! aqui
+Em toda tabela existente em um banco de dados relacional, haverá sempre uma coluna ou um conjunto de colunas concatenadas, cujos valores são únicos na tabela, isto é, nunca se repete aquele valor em nenhuma outra linha da tabela.
 
-Em toda a tabelas de um banco de dados relacional, há sempre uma coluna ou um grupo de colunas cujos valores são exclusivos na tabela, ou seja, esses valores nunca se repetem em nenhuma outra linha da mesma tabela.
+Em geral, uma tabela pode ter mais de uma chave que possua a capacidade de identificação única das linhas da tabela. Nesse caso, cada uma dessas chaves da tabela é chamada de CHAVE CANDIDATA.
+
+Uma das chaves é definida como primária e as outras ficam como chaves alternativas à chave primária.
 
 ## Valores nulos
 
@@ -56,4 +60,28 @@ Em toda a tabelas de um banco de dados relacional, há sempre uma coluna ou um g
 
 - Além disso, nenhuma das colunas que compõem a chave primária pode ter um valor nulo.
 
-## o que faltou
+## Chave estrangeira
+
+Uma tabela pode ter um conjunto de atributos que contêm valores com o mesmo domínio de um conjunto de atributos que formam a chave primária de outra tabela. Esse conjunto se chama chave estrangeira.
+
+Isso ajuda a eliminar ou diminuir erros de entrada de dados nos sistemas, e a manter a consistência do banco de dados.
+
+Sempre que uma coluna de uma determinada tabela A for uma chave primária em uma tabela B, essa coluna na tabela A é uma chave estrangeira em relação à mesma coluna na tabela B.
+
+IMAGEM
+
+Esse conceito estabelece uma regra em bancos de dados relacionais denominada integridade referencial.
+
+## Integridade referencial
+
+uma tabela contém uma chave estrangeira, então, o valor dessa chave só pode ser:
+
+▶Nulo – nesse caso pode, pois representa a inexistência de referência para uma linha da tabela.
+
+▶Igual ao valor de alguma chave primária na tabela referenciada.
+
+O que não pode haver é um valor de chave estrangeira que não exista como chave primária de nenhuma linha da tabela referenciada
+
+## Restrições
+
+as restrições aqui
