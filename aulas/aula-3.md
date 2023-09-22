@@ -32,6 +32,8 @@ O Modelo Entidade-Relacionamento (MER) foi desenvolvido por Peter Pin-Shan Chen 
 
 - Quando algo no ambiente de negócios nos leva a desejar armazenar dados sobre isso, isso o classifica como uma entidade de negócios.
 
+<!-- IMAGEM -->
+
 ## Relacionamentos
 
 - Relacionamentos representam associações entre entidades do mundo real.
@@ -47,6 +49,8 @@ O Modelo Entidade-Relacionamento (MER) foi desenvolvido por Peter Pin-Shan Chen 
 - Um relacionamento pode ter dois nomes, um para explicar a associação no sentido da Entidade A para a Entidade B e outro no sentido inverso.
 
 - A leitura de um relacionamento não é unidirecional, não tendo um lado específico para iniciar a interpretação.
+
+<!-- IMAGEM -->
 
 ## Atributos
 
@@ -68,50 +72,161 @@ O Modelo Entidade-Relacionamento (MER) foi desenvolvido por Peter Pin-Shan Chen 
 
 - Os atributos descritores (não chaves) são utilizados para descrever características não únicas de uma ocorrência específica da entidade.
 
+<!-- IMAGEM -->
+
 ## Conectividade de um relacionamento (Cardinalidade Máxima)
 
 A conectividade em modelagem ER descreve como as ocorrências de entidades em um relacionamento se associam. Os valores de conectividade podem ser "um" ou "muitos" em um dos lados do relacionamento, indicando que uma ocorrência de uma entidade pode se conectar a uma ocorrência de outra entidade ou a várias ocorrências dessa entidade.
 
-### Um-para-um (1:1)
+A cardinalidade máxima pode ser 1 ou muitos (n) para cada lado do relacionamento.
 
-Quando, entre duas entidades, temos um relacionamento em que cada ocorrência da entidade A se associa ou relaciona com uma e somente uma ocorrência da entidade B e cada ocorrência da entidade B se relaciona com uma e somente uma ocorrência da entidade A, temos um relacionamento com conectividade um-para-um (1:1).
+### Relacionamento um-para-um (1:1)
 
-### Um-para-muitos (1:n)
+- Em um relacionamento um-para-um, temos uma conexão entre duas entidades.
 
-É a conectividade mais comum no mundo real e no mundo dos negócios, além de ser a mais utilizada na solução de modelo de dados. Ela acontece quando uma ocorrência da entidade A se associa ou conecta a mais de uma ocorrência da entidade B, visto que a ocorrência da entidade B está conectada a uma e somente uma ocorrência da entidade A.
+- Cada ocorrência da entidade A se relaciona exclusivamente com uma ocorrência da entidade B.
 
-### Muitos-para-muitos
+- Da mesma forma, cada ocorrência da entidade B se relaciona apenas com uma ocorrência da entidade A.
 
-Quando encontramos nos dois sentidos de leitura a conectividade de um-para-muitos, temos, então, o que se denomina de conectividade muitos-para-muitos. Um relacionamento com essa conectividade é normalmente um fato, acontecimento de negócios no mundo real.
+![Diagrama entidade-relacionamento](/imagens/aula-1-2-1.png)
 
-## Atributos em um relacionamento
+#### DER
 
-Como estamos atuando no nível conceitual, temos a obrigação de observar que, nesse tipo de relacionamento de muitos-para-muitos, normalmente ocorre a presença de atributos.
+![Diagrama entidade-relacionamento](/imagens/4.png)
 
-Atributos são normalmente assinalados em relacionamentos muitos-para-muitos. Nunca assinalamos atributos em relacionamentos um-para-um e em relacionamentos um-para-muitos porque, no sentido de leitura de um relacionamento desse tipo, sempre temos um lado que tem somente um elemento relacionado, e seria ambíguo colocarmos o atributo no relacionamento em vez de colocarmos na entidade.
+#### Tabela em um banco de dados relacional
 
-Sempre que temos relacionamentos de um-para-um ou um-para-muitos, os atributos que possam existir em decorrência do fato são elementos de descrição de uma das duas entidades.
+<details>
+  <summary>SPOILER!</summary>
+
+  ![Diagrama entidade-relacionamento](/imagens/5.png)
+</details>
+
+### Relacionamento um-para-muitos (1:n)
+
+- O relacionamento um-para-muitos é o tipo de conexão mais comum em situações do mundo real e no ambiente de negócios.
+Este tipo de relacionamento é amplamente utilizado na modelagem de dados.
+
+- Ele ocorre quando uma ocorrência da entidade A está associada a várias ocorrências da entidade B.
+
+- Ao mesmo tempo, cada ocorrência da entidade B está vinculada a apenas uma ocorrência da entidade A.
+
+![Diagrama entidade-relacionamento](/imagens/aula-1-2-2.png)
+
+#### DER
+
+![Diagrama entidade-relacionamento](/imagens/3.png)
+
+#### Tabela em um banco de dados relacional
+
+<details>
+  <summary>SPOILER!</summary>
+
+  ![Diagrama entidade-relacionamento](/imagens/6.png)
+</details>
+
+### Relacionamento muitos-para-muitos
+
+- O relacionamento muitos-para-muitos ocorre quando, em ambos os lados da relação, há conectividade de um-para-muitos.
+
+- Esse tipo de relacionamento representa eventos ou fatos comuns nos negócios do mundo real.
+
+![Diagrama entidade-relacionamento](/imagens/aula-1-2-3.png)
+
+#### DER
+
+![Diagrama entidade-relacionamento](/imagens/exercicio-1-1.png)
+
+## Atributos em um relacionamento muitos-para-muitos
+
+No nível conceitual, relacionamentos muitos-para-muitos geralmente têm atributos.
+
+<!-- IMAGEM -->
+
+Observação: Em relacionamentos um-para-um ou um-para-muitos, qualquer atributo necessário para descrever o relacionamento deve ser atribuído às entidades em vez de ao relacionamento em si. Isso ocorre porque nesses tipos de relacionamentos, sempre há um lado com apenas um elemento relacionado.
 
 ## Opcionalidade de relacionamento (Cardinalidade Mínima)
 
-Como representar essa opcionalidade? Essa situação indica que a conectividade mínima é igual a 0 (zero). Um pequeno círculo no lado que existe a opcionalidade faz essa representação:
+A opcionalidade de relacionamento (cardinalidade mínima) indica se a ocorrência do relacionamento é obrigatória (1) ou opcional (0).
 
-## Condicionalidade de um relacionamento
+A cardinalidade mínima pode ser representada numericamente, com 0 ou 1, antes da cardinalidade máxima, separando-os por uma vírgula.
+
+<!-- IMAGEM -->
+
+## Leitura de um relacionamento entre duas entidades
+
+Exemplo da leitura de um relacionamento entre as entidades Aluno e Disciplinas em ambos os sentidos da relação:
+
+<!-- IMAGEM -->
+
+- Um aluno pode estar matriculado em zero (0) ou mais (n) disciplinas.
+
+<!-- IMAGEM -->
+
+- Uma disciplina pode ter zero (0) ou mais (n) alunos matriculados.
+
+Isso significa que essa relação é muitos-para-muitos (n:n).
+
+![Diagrama entidade-relacionamento](/imagens/exercicio-1-1.png)
+
+Simplificando, o aluno pode se matricular em várias disciplinas, ou não se matricular em nenhuma, e uma disciplina pode ter vários alunos matriculados, ou nenhum.
+
+<!-- ## Condicionalidade de um relacionamento
 
 Um relacionamento pode ser condicional ou ter restrições, ou seja, podemos ter um modelo em que uma entidade se relacione com outras duas, porém com cada uma exclusivamente.
 
-A entidade A se relaciona com a entidade B ou com a entidade C.
+A entidade A se relaciona com a entidade B ou com a entidade C. -->
 
 ## Relacionamentos reflexivos
 
-São os relacionamentos que acontecem entre as ocorrências de uma mesma entidade. Normalmente, esses relacionamentos representam algum sentido de hierarquia.
+- São relacionamentos que ocorrem entre as ocorrências da mesma entidade.
 
-Os relacionamentos reflexivos podem ter qualquer uma das três possibilidades de conectividade: um-para-um, um-para-muitos e muitos-para-muitos.
+- Geralmente, representam algum tipo de hierarquia interna.
 
-formato de diagramação para representar os papéis, o que deixa um pouco mais clara essa definição do modelo.
+- Relacionamentos reflexivos podem ter as três possibilidades de conectividade: um-para-um, um-para-muitos e muitos-para-muitos.
+
+<!-- IMAGEM -->
 
 ## Resolução de relacionamentos muitos-para-muitos
 
-Todo relacionamento muitos-para-muitos pode ser entendido como uma entidade. Essas entidades denominam-se associativas, pois elas representam um fato, um relacionamento muitos-para-muitos.
+- Relacionamentos muitos-para-muitos podem ser tratados como entidades associativas.
 
-algo que não requeira pelo menos dois atributos para o descrever provavelmente não caracterizará uma entidade e, sim, um atributo de alguma outra entidade,
+- Essas entidades representam um fato ou um relacionamento complexo.
+
+- Um relacionamento muitos-para-muitos pode ser dividido em dois relacionamentos 1:n, criando assim uma nova entidade que se relaciona com as duas entidades originais.
+
+![Diagrama entidade-relacionamento](/imagens/aula-1-2-4.png)
+
+### DER
+
+#### representação n:n
+
+![Diagrama entidade-relacionamento](/imagens/exercicio-1-1.png)
+
+#### agora representado por duas relações 1:n
+
+![Diagrama entidade-relacionamento](/imagens/exercicio-1-2.png)
+
+### Tabela em um banco de dados relacional
+
+<details>
+  <summary>SPOILER!</summary>
+
+  ![Diagrama entidade-relacionamento](/imagens/7.png)
+
+  Relacionamentos muitos-para-muitos (2 tabelas) são representados por dois relacionamentos 1:n em um banco de dados relacional. Isso envolve o uso de uma terceira tabela, conhecida como tabela associativa, para relacionar as duas tabelas que têm o relacionamento n:n.
+</details>
+
+## Atributos ou entidade?
+
+- Algo que não requeira pelo menos dois atributos para ser descrito provavelmente não é uma entidade, mas sim um atributo de outra entidade.
+
+- Atributos multivalorados também podem ser tratados como outra entidade.
+
+## Entidade fraca ou dependente
+
+É uma entidade que não possui existência própria independente no ambiente e depende da existência de uma entidade forte à qual está relacionada.
+
+## Referências
+
+- MACHADO, F. N. R. BANCO DE DADOS  PROJETO E IMPLEMENTAÇÃO. [s.l.] Saraiva Educação S.A., 2020.

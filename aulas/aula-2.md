@@ -6,7 +6,9 @@ Criada por Edgar Frank Codd em 1970.
 
 A abordagem da teoria relacional de banco de dados se concentra em melhorar a compreensão dos dados pelos usuários, apresentando o banco de dados como um conjunto de tabelas de duas dimensões organizadas em linhas e colunas.
 
-Uma tabela relacional é uma estruturação dos dados por assunto, organizada em tabelas com linhas e colunas, e cada linha é a representação de uma ocorrência de um objeto, um assunto, descrita por valores em cada coluna. 
+Uma tabela relacional é uma estruturação dos dados por assunto, organizada em tabelas com linhas e colunas, e cada linha é a representação de uma ocorrência de um objeto, um assunto, descrita por valores em cada coluna.
+
+IMAGEM
 
 ## Premissas que definem uma tabela de dados
 
@@ -62,26 +64,64 @@ Uma das chaves é definida como primária e as outras ficam como chaves alternat
 
 ## Chave estrangeira
 
-Uma tabela pode ter um conjunto de atributos que contêm valores com o mesmo domínio de um conjunto de atributos que formam a chave primária de outra tabela. Esse conjunto se chama chave estrangeira.
+Uma tabela pode incluir um conjunto de atributos cujos valores pertencem ao mesmo domínio de um conjunto de atributos que formam a chave primária de outra tabela. Isso é conhecido como "chave estrangeira."
 
-Isso ajuda a eliminar ou diminuir erros de entrada de dados nos sistemas, e a manter a consistência do banco de dados.
+- O uso de chaves estrangeiras ajuda a reduzir ou eliminar erros de entrada de dados nos sistemas.
 
-Sempre que uma coluna de uma determinada tabela A for uma chave primária em uma tabela B, essa coluna na tabela A é uma chave estrangeira em relação à mesma coluna na tabela B.
+- Mantém a consistência do banco de dados, assegurando que as relações entre as tabelas sejam adequadas e respeitadas.
+
+Quando uma coluna em uma tabela (por exemplo, tabela A) é uma chave primária em outra tabela (por exemplo, tabela B), essa coluna na tabela A é considerada uma "chave estrangeira" em relação à mesma coluna na tabela B.
 
 IMAGEM
 
-Esse conceito estabelece uma regra em bancos de dados relacionais denominada integridade referencial.
+Esse conceito estabelece uma regra fundamental em bancos de dados relacionais denominada "integridade referencial."
 
 ## Integridade referencial
 
-uma tabela contém uma chave estrangeira, então, o valor dessa chave só pode ser:
+Quando uma tabela possui uma chave estrangeira, os valores dessa chave só podem ser:
 
-▶Nulo – nesse caso pode, pois representa a inexistência de referência para uma linha da tabela.
+- Nulo: Isso é permitido, pois representa a ausência de referência para uma linha na tabela relacionada.
 
-▶Igual ao valor de alguma chave primária na tabela referenciada.
+- Igual ao Valor de Alguma Chave Primária: Os valores da chave estrangeira devem corresponder a algum valor da chave primária na tabela referenciada.
 
-O que não pode haver é um valor de chave estrangeira que não exista como chave primária de nenhuma linha da tabela referenciada
+Importante ressaltar que não é permitido ter um valor na chave estrangeira que não corresponda a nenhuma chave primária na tabela referenciada.
 
-## Restrições
+## Restrições para garantir a integridade referencial
 
-as restrições aqui
+### Tabela Pai
+
+A tabela pai é a tabela com a chave primária da relação, que é referenciada pelas chaves estrangeiras das tabelas filhas.
+
+### Tabelas Filhas
+
+As tabelas filhas são as tabelas com chaves estrangeiras que se relacionam com a chave primária da tabela pai.
+
+#### DELETE
+
+Ao excluir um registro da tabela pai, quando há tabelas filhas relacionadas:
+
+- RESTRICT: A exclusão é impedida caso haja registros relacionados nas tabelas filhas.
+
+- CASCADE: Exclui todos os registros nas tabelas filhas em cascata junto com o registro da tabela pai.
+
+- SET DEFAULT: Define os registros nas tabelas filhas com uma referência padrão para a tabela pai.
+
+- SET NULL: Define as referências nas tabelas filhas como nulas, sem conexão com a tabela pai.
+
+#### INSERT
+
+Ao inserir um registro na tabela filha:
+
+- RESTRICT: Verifica se o valor da chave estrangeira está relacionado a um registro da tabela pai; caso contrário, a operação é impedida.
+
+#### UPDATE
+
+Ao atualizar a chave estrangeira de um registro na tabela filha:
+
+- RESTRICT: Verifica se o novo valor da chave estrangeira está associado a um registro válido na tabela pai; se não estiver, a operação é cancelada.
+
+Essas restrições garantem a integridade referencial entre tabelas relacionadas, assegurando que os dados sejam consistentes e que as operações de inserção, atualização e exclusão sejam controladas de acordo com as regras definidas.
+
+## Referências
+
+- MACHADO, F. N. R. BANCO DE DADOS  PROJETO E IMPLEMENTAÇÃO. [s.l.] Saraiva Educação S.A., 2020.

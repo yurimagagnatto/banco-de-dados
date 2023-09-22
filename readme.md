@@ -14,6 +14,12 @@
 
 2. [Diagrama ER - Empresa de Streaming de Vídeos](/exercicios/exercicio-2.md)
 
-- exemplo tabela
+## Referências
 
-- conjuntos (1:1, 1:n, n,n) - conjuntos e diagrama
+- MACHADO, F. N. R. BANCO DE DADOS  PROJETO E IMPLEMENTAÇÃO. [s.l.] Saraiva Educação S.A., 2020.
+
+- [O que é um Banco de Dados?](https://www.oracle.com/br/database/what-is-database/)
+
+- [O que é um banco de dados relacional?](https://cloud.google.com/learn/what-is-a-relational-database?hl=pt-br)
+
+- [O que é um banco de dados relacional (RDBMS)?](https://www.oracle.com/br/database/what-is-a-relational-database/)
