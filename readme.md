@@ -14,6 +14,10 @@
 
 2. [Diagrama ER - Empresa de Streaming de Vídeos](/exercicios/exercicio-2.md)
 
+## Lista de exercícios
+
+1. [Modelagem conceitual de dados](/exercicios/lista-1.md)
+
 ## Referências
 
 - MACHADO, F. N. R. BANCO DE DADOS  PROJETO E IMPLEMENTAÇÃO. [s.l.] Saraiva Educação S.A., 2020.
