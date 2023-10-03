@@ -6,7 +6,9 @@
 
 - [Teoria Relacional](/aulas/aula-2.md)
 
-- [Modelo Entidade-Relacionamento](/aulas/aula-3.md)
+- [Modelo Conceitual - Diagrama Entidade-Relacionamento](/aulas/aula-3.md)
+
+- [Modelo Lógico - Diagrama Entidade-Relacionamento](/aulas/aula-4.md)
 
 ## Exercícios
 

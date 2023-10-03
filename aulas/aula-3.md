@@ -1,4 +1,4 @@
-# Modelo Entidade-Relacionamento
+# Modelo Conceitual - Diagrama Entidade-Relacionamento (notação Chen)
 
 [VOLTAR](/readme.md)
 
