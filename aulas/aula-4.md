@@ -20,9 +20,13 @@ Dica: Em relações 1:N (um-para-muitos), a tabela que representa o lado "muitos
 
 ## Modelo Conceitual
 
+### Diagrama Entidade-Relacionamento (notação Chen)
+
 ![Modelo conceitual](/imagens/modelo-conceitual.png)
 
 ## Modelo Lógico
+
+### Diagrama Entidade-Relacionamento (notação engenharia da informação)
 
 ![Modelo lógico](/imagens/modelo-logico.png)
 
