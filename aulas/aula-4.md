@@ -18,12 +18,22 @@
 
 Dica: Em relações 1:N (um-para-muitos), a tabela que representa o lado "muitos" contém a chave estrangeira, que faz referência à chave primária da tabela que representa o lado "um". Isso estabelece a ligação entre os registros nas duas tabelas.
 
+## Modelo Conceitual
+
+![Modelo conceitual](/imagens/modelo-conceitual.png)
+
+## Modelo Lógico
+
+![Modelo lógico](/imagens/modelo-logico.png)
+
 ## Referências
 
 - MACHADO, F. N. R. BANCO DE DADOS  PROJETO E IMPLEMENTAÇÃO. [s.l.] Saraiva Educação S.A., 2020.
 
-- https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model
+- [Entity–relationship model - Wikipedia](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model)
 
-- https://support.microsoft.com/pt-pt/office/criar-um-diagrama-com-a-nota%C3%A7%C3%A3o-da-base-de-dados-de-p%C3%A9s-de-galinha-1ec22af9-3bd3-4354-b2b5-ed5752af6769
+- [Criar um diagrama com a notação da base de dados de pés de galinha - Suporte da Microsoft](https://support.microsoft.com/pt-pt/office/criar-um-diagrama-com-a-nota%C3%A7%C3%A3o-da-base-de-dados-de-p%C3%A9s-de-galinha-1ec22af9-3bd3-4354-b2b5-ed5752af6769)
 
-- https://www.lucidchart.com/pages/pt/o-que-e-diagrama-entidade-relacionamento
+- [O que é um diagrama entidade relacionamento? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-entidade-relacionamento)
+
+- [brModeloWeb](https://app.brmodeloweb.com/)
