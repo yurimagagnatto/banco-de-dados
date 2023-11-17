@@ -10,6 +10,12 @@
 
 - [Modelo Lógico - Diagrama Entidade-Relacionamento](/aulas/aula-4.md)
 
+- Modelo Físico
+
+  - [SQL](/aulas/aula-5.md)
+
+    - [DDL](/aulas/aula-6.md)
+
 ## Exercícios
 
 1. [Diagrama ER - Alunos e Disciplinas](/exercicios/exercicio-1.md)
