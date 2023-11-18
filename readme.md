@@ -16,6 +16,14 @@
 
     - [DDL](/aulas/aula-6.md)
 
+## Tutorial MySQL / MySQL Workbench
+
+1. [MySQL e MySQL Workbench (instalação)](/aulas/mysql-workbench-1.pdf)
+
+2. [MySQL Workbench - Implementando um Banco de Dados MySQL](/aulas/mysql-workbench-2.pdf)
+
+3. [MySQL Workbench - Criando um Modelo e Diagrama EER](/aulas/mysql-workbench-3.pdf)
+
 ## Exercícios
 
 1. [Diagrama ER - Alunos e Disciplinas](/exercicios/exercicio-1.md)
