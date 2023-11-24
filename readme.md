@@ -16,6 +16,10 @@
 
     - [DDL](/aulas/aula-6.md)
 
+    - [DML](/aulas/aula-7.md)
+
+    - [DQL](/aulas/aula-8.md)
+
 ## Tutorial MySQL / MySQL Workbench
 
 1. [MySQL e MySQL Workbench (instalação)](/aulas/mysql-workbench-1.pdf)
