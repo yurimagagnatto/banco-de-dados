@@ -10,15 +10,15 @@
 
 - [Modelo Lógico - Diagrama Entidade-Relacionamento](/aulas/aula-4.md)
 
-- Modelo Físico
+- [Modelo Físico - Implementação do Banco de Dados](/aulas/aula-4-1.md)
 
-  - [SQL](/aulas/aula-5.md)
+- [SQL](/aulas/aula-5.md)
 
-    - [DDL](/aulas/aula-6.md)
+  - [DDL](/aulas/aula-6.md)
 
-    - [DML](/aulas/aula-7.md)
+  - [DML](/aulas/aula-7.md)
 
-    - [DQL](/aulas/aula-8.md)
+  - [DQL](/aulas/aula-8.md)
 
 ## Tutorial MySQL / MySQL Workbench
 
