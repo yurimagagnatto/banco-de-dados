@@ -248,8 +248,7 @@ VALUES
 (18, 36, 'Will Munson'),
 (19, 37, 'Chris Washington'),
 (18, 38, 'Killmonger'),
-(20, 39, 'O Coringa'),
-(9, 40, 'Elastigirl');
+(20, 39, 'O Coringa');
 
 -- Inserts para a tabela categorias
 INSERT INTO categorias (nome, descricao)
@@ -287,17 +286,11 @@ VALUES
 (7, 2), -- Ficção Científica
 (7, 13), -- História
 (8, 1), -- Drama
-(8, 14), -- Família
 (9, 10), -- Crime
-(9, 15), -- Mistério
 (10, 8), -- Animação
-(10, 16), -- História
 (11, 11), -- Crime
-(11, 17), -- Fantasia
 (12, 1), -- Drama
-(12, 18), -- História
 (13, 3), -- Ação
-(13, 19), -- Animação
 (14, 2), -- Ficção Científica
 (14, 3), -- Ação
 (15, 1), -- Drama
@@ -307,8 +300,6 @@ VALUES
 (17, 5), -- Comédia
 (17, 1), -- Drama
 (18, 11), -- Crime
-(18, 20), -- Família
-(19, 20), -- Família
 (19, 7), -- Animação
 (20, 3), -- Ação
 (20, 7); -- Animação
@@ -372,15 +363,5 @@ VALUES
 (7, 7, 5, 'A mente humana é um enigma intrigante!'),
 (8, 8, 4, 'Um filme de guerra emocionante com atuações impressionantes.'),
 (9, 9, 5, 'Cidade de Deus é impactante e visceral.'),
-(10, 10, 4, 'Schindler é um herói real. Uma história poderosa.'),
-(11, 11, 5, 'Animação encantadora para todas as idades.'),
-(12, 12, 4, 'Um conto mágico e sombrio.'),
-(13, 13, 5, 'Artes marciais impressionantes e uma bela história.'),
-(14, 14, 4, 'Uma jornada incrível em um mundo de fantasia.'),
-(15, 15, 5, 'Uma obra-prima cinematográfica.'),
-(16, 16, 4, 'Um filme emocionante com atuações memoráveis.'),
-(17, 17, 5, 'Pantera Negra é uma revolução no cinema de super-heróis.'),
-(18, 18, 4, 'O Cavaleiro das Trevas é sombrio e envolvente.'),
-(19, 19, 5, 'Uma aventura incrível para toda a família.'),
-(20, 20, 4, 'Os Incríveis é uma animação inteligente e emocionante.');
+(10, 10, 4, 'Schindler é um herói real. Uma história poderosa.');
 ```
