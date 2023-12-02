@@ -1,160 +1,38 @@
-# DDL (Data Definition Language)
+# SQL (Structured Query Language)
 
 [VOLTAR](/readme.md)
 
-## Criar um banco de dados
+SQL (Structured Query Language) é uma linguagem de programação usada para gerenciar sistemas de gerenciamento de banco de dados relacionais (RDBMS). Ela é usada para criar, modificar e consultar bancos de dados. Existem quatro categorias principais de comandos SQL:
+
+## DDL (Data Definition Language)
+
+A Linguagem de Definição de Dados (DDL) é usada para definir a estrutura do banco de dados, como tabelas, índices, restrições e outros objetos de esquema. Alguns dos comandos DDL mais comuns incluem:
+
+CREATE TABLE: Usado para criar uma nova tabela no banco de dados.
+
+ALTER TABLE: Usado para modificar a estrutura de uma tabela existente.
+
+DROP TABLE: Usado para excluir uma tabela do banco de dados.
+
+CREATE INDEX: Usado para criar índices em colunas de tabelas para melhorar o desempenho de consultas.
+
+## DML (Data Manipulation Language)
+
+A Linguagem de Manipulação de Dados (DML) é usada para inserir, atualizar e excluir dados em uma tabela. Alguns dos comandos DML mais comuns incluem:
+
+INSERT: Usado para adicionar novos registros a uma tabela.
+
+UPDATE: Usado para modificar os dados em registros existentes.
+
+DELETE: Usado para excluir registros de uma tabela.
+
+## DQL (Data Query Language)
+
+A Linguagem de Consulta de Dados (DQL) é usada para recuperar informações de um banco de dados. O principal comando DQL é o SELECT, que permite extrair dados de uma ou mais tabelas. O SQL SELECT permite filtrar, ordenar e agrupar dados de acordo com critérios específicos. Por exemplo:
 
 ```sql
-CREATE DATABASE `nome_do_banco_de_dados`;
+SELECT * FROM tabela WHERE condição;
+SELECT coluna1, coluna2 FROM tabela ORDER BY coluna1;
 ```
 
-## Deletar um banco de dados
-
-```sql
-DROP DATABASE `nome_do_banco_de_dados`;
-```
-
-## Setar um banco de dados para ser usado
-
-```sql
-USE `nome_do_banco_de_dados`;
-```
-
-## Criar uma tabela
-
-Criando uma tabela com várias colunas (de tipos diferentes) e com uma chave primária auto incrementável.
-
-```sql
-CREATE TABLE `nome_do_banco_de_dados`.`nome_da_tabela` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `coluna_2` CHAR(2) NOT NULL,
-  `coluna_3` VARCHAR(80) NOT NULL,
-  `coluna_4` TEXT,
-  `coluna_5` DATE,
-  `coluna_6` TIME,
-  `coluna_7` DATETIME,
-  `coluna_8` FLOAT NOT NULL,
-
-  PRIMARY KEY (`id`)
-);
-```
-
-## Deletar uma tabela
-
-```sql
-DROP TABLE `nome_do_banco_de_dados`;
-```
-
-## Exemplo de como criar uma tabela com chave estrangeira
-
-A segunda tabela tem uma coluna "chave estrangeira" que faz referência para a chave primária da primeira tabela.
-
-```sql
-CREATE TABLE `nome_do_banco_de_dados`.`tabela_1` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `coluna_2` VARCHAR(80) NOT NULL,
-
-  PRIMARY KEY (`id`)
-);
-
-CREATE TABLE `nome_do_banco_de_dados`.`tabela_2` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `tabela_1_id` INT,
-
-  PRIMARY KEY (`id`),
-
-  FOREIGN KEY (`tabela_1_id`) REFERENCES `tabela_1` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-);
-```
-
-## Criando uma coluna com índice
-
-```sql
-CREATE TABLE `nome_do_banco_de_dados`.`tabela` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `titulo` VARCHAR(80) NOT NULL,
-
-  PRIMARY KEY (`id`),
-
-  INDEX (`titulo`)
-);
-```
-
-## Criando uma coluna que armazena registros únicos
-
-```sql
-CREATE TABLE IF NOT EXISTS `nome_do_banco_de_dados`.`tabela` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(80) NOT NULL,
-  `cpf` VARCHAR(11) NOT NULL,
-
-  PRIMARY KEY (`id`),
-
-  UNIQUE (`cpf`)
-);
-```
-
-## Deletar uma coluna de uma tabela
-
-```sql
-ALTER TABLE `nome_do_banco_de_dados`.`tabela`
-DROP COLUMN `coluna`;
-```
-
-## Adicionar uma coluna a uma tabela existente
-
-```sql
-ALTER TABLE `nome_do_banco_de_dados`.`tabela`
-ADD `coluna` INT;
-```
-
-## Modificar uma coluna de uma tabela existente
-
-```sql
-ALTER TABLE `nome_do_banco_de_dados`.`tabela`
-MODIFY COLUMN `coluna` VARCHAR(80);
-```
-
-## Adicionar uma chave estrangeira a uma tabela existente
-
-`nome_da_chave_estrangeira` é opcional, caso não seja passado será gerado um nome automáticamente.
-
-```sql
-ALTER TABLE `nome_do_banco_de_dados`.`tabela_2`
-ADD FOREIGN KEY `nome_da_chave_estrangeira` (`tabela_1_id`) REFERENCES `tabela_1` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-```
-
-## Deletar uma chave estrangeira
-
-```sql
-ALTER TABLE `nome_do_banco_de_dados`.`tabela`
-DROP FOREIGN KEY `nome_da_chave_estrangeira`;
-```
-
-## Criar índice
-
-```sql
-CREATE INDEX `nome_do_indice`
-ON `nome_do_banco_de_dados`.`tabela` (`coluna`);
-```
-
-## Criar índice único
-
-```sql
-CREATE INDEX `nome_do_indice`
-ON `nome_do_banco_de_dados`.`tabela` (`coluna`);
-```
-
-## Deletar um índice
-
-```sql
-ALTER TABLE `nome_do_banco_de_dados`.`tabela`
-DROP INDEX `nome_do_indice`;
-```
-
-## Criar um índice composto (um mesmo índice para mais de uma coluna)
-
-```sql
-CREATE INDEX `nome_do_indice`
-ON `nome_do_banco_de_dados`.`tabela` (`coluna_1`,`coluna_2`);
-```
+Essas três categorias de comandos SQL são fundamentais para gerenciar eficazmente um banco de dados relacional, desde a definição da estrutura do banco de dados até a manipulação e recuperação de dados.
