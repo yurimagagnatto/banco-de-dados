@@ -6,7 +6,7 @@ Considere o diagrama entidade-relacionamento apresentado abaixo, representando o
 
 ## Diagrama entidade-relacionamento
 
-![Diagrama entidade-relacionamento](/diagrama.png)
+![Diagrama entidade-relacionamento](/imagens/prova-2-diagrama.png)
 
 ## Relações
 
