@@ -42,6 +42,8 @@
 
 1. [Prova 1 (06/10/2023)](/exercicios/prova-1.md)
 
+2. [Prova 2 (10/12/2023)](/exercicios/prova-2.md)
+
 ## Referências
 
 - MACHADO, F. N. R. BANCO DE DADOS  PROJETO E IMPLEMENTAÇÃO. [s.l.] Saraiva Educação S.A., 2020.
