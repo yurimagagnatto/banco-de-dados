@@ -10,6 +10,10 @@
 
 - [Modelo Lógico - Diagrama Entidade-Relacionamento](/aulas/aula-4.md)
 
+## Atividades
+
+- [Sistema de gestão de projetos e tarefas](/atividades/atividade-1.md)
+
 ## Referências
 
 - MACHADO, F. N. R. BANCO DE DADOS  PROJETO E IMPLEMENTAÇÃO. [s.l.] Saraiva Educação S.A., 2020.
