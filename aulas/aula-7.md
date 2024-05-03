@@ -141,7 +141,7 @@ ON `nome_do_banco_de_dados`.`tabela` (`coluna`);
 ## Criar índice único
 
 ```sql
-CREATE INDEX `nome_do_indice`
+CREATE UNIQUE INDEX `nome_do_indice`
 ON `nome_do_banco_de_dados`.`tabela` (`coluna`);
 ```
 
