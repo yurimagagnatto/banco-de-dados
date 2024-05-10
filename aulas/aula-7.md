@@ -45,7 +45,43 @@ CREATE TABLE `nome_do_banco_de_dados`.`nome_da_tabela` (
 DROP TABLE `nome_do_banco_de_dados`;
 ```
 
-## Exemplo de como criar uma tabela com chave estrangeira
+## Chave estrangeira
+
+As restrições de chave estrangeira em MySQL ajudam a manter a integridade referencial entre tabelas relacionadas. Aqui está uma explicação das opções ON UPDATE e ON DELETE:
+
+### ON UPDATE
+
+Essa opção determina o que acontece quando a chave primária referenciada é atualizada.
+
+#### RESTRICT
+
+Impede a atualização da chave primária enquanto existirem chaves estrangeiras associadas a ela. Ou seja, se uma tentativa de atualização da chave primária for feita e existirem chaves estrangeiras relacionadas, a operação será impedida.
+
+#### CASCADE
+
+Quando a chave primária é atualizada, todas as chaves estrangeiras associadas a ela também serão atualizadas automaticamente para refletir a nova chave primária.
+
+#### SET NULL
+
+Define os valores das chaves estrangeiras como NULL quando a chave primária é atualizada. Isso só é possível se a coluna da chave estrangeira permitir valores nulos.
+
+### ON DELETE
+
+Essa opção determina o que acontece quando a chave primária referenciada é excluída.
+
+#### RESTRICT
+
+Impede a exclusão da chave primária se existirem chaves estrangeiras associadas a ela. Ou seja, se uma tentativa de exclusão da chave primária for feita e existirem chaves estrangeiras relacionadas, a operação será impedida.
+
+#### CASCADE
+
+Quando a chave primária é excluída, todas as chaves estrangeiras associadas a ela também serão excluídas automaticamente.
+
+#### SET NULL
+
+Define os valores das chaves estrangeiras como NULL quando a chave primária é excluída. Isso só é possível se a coluna da chave estrangeira permitir valores nulos.
+
+### Exemplo de como criar uma tabela com chave estrangeira
 
 A segunda tabela tem uma coluna "chave estrangeira" que faz referência para a chave primária da primeira tabela.
 
@@ -131,28 +167,30 @@ ALTER TABLE `nome_do_banco_de_dados`.`tabela`
 DROP FOREIGN KEY `nome_da_chave_estrangeira`;
 ```
 
-## Criar índice
+## Índice
+
+### Criar índice
 
 ```sql
 CREATE INDEX `nome_do_indice`
 ON `nome_do_banco_de_dados`.`tabela` (`coluna`);
 ```
 
-## Criar índice único
+### Criar índice único
 
 ```sql
 CREATE UNIQUE INDEX `nome_do_indice`
 ON `nome_do_banco_de_dados`.`tabela` (`coluna`);
 ```
 
-## Deletar um índice
+### Deletar um índice
 
 ```sql
 ALTER TABLE `nome_do_banco_de_dados`.`tabela`
 DROP INDEX `nome_do_indice`;
 ```
 
-## Criar um índice composto (um mesmo índice para mais de uma coluna)
+### Criar um índice composto (um mesmo índice para mais de uma coluna)
 
 ```sql
 CREATE INDEX `nome_do_indice`
