@@ -24,6 +24,10 @@
 
 - [Sistema de gestão de projetos e tarefas](/atividades/atividade-1.md)
 
+- [Sistema para um portal de notícias](/atividades/atividade-2.md)
+
+- [Sistema de gestão de eventos](/atividades/atividade-3.md)
+
 ## Referências
 
 - MACHADO, F. N. R. BANCO DE DADOS  PROJETO E IMPLEMENTAÇÃO. [s.l.] Saraiva Educação S.A., 2020.
