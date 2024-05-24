@@ -62,6 +62,7 @@ CREATE TABLE `inscricoes` (
   PRIMARY KEY (`id`),
   INDEX (`status`),
   INDEX (`data_inscricao`),
+  UNIQUE INDEX (`evento_id`,`participante_id`),
   FOREIGN KEY (`evento_id`) REFERENCES `eventos` (`id`),
   FOREIGN KEY (`participante_id`) REFERENCES `participantes` (`id`)
 );
