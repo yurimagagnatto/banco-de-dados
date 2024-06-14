@@ -28,6 +28,8 @@
 
 - [Sistema de gestão de eventos](/atividades/atividade-3.md)
 
+- [Sistema de Gerenciamento de Biblioteca](/atividades/atividade-4.md)
+
 ## Referências
 
 - MACHADO, F. N. R. BANCO DE DADOS  PROJETO E IMPLEMENTAÇÃO. [s.l.] Saraiva Educação S.A., 2020.
