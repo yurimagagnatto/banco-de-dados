@@ -135,3 +135,4 @@
 37. Selecionar o título do livro e a quantidade de empréstimos que cada livro teve (group).
 38. Selecionar todos os empréstimos ainda não devolvidos e os nomes dos membros.
 39. Selecionar o título do livro e o nome do autor dos livros em ordem decrescente de ano de publicação.
+40. Selecionar os autores que têm mais de 2 livros na tabela (group e having).
