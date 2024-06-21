@@ -77,6 +77,12 @@ SELECT * FROM tabela WHERE coluna BETWEEN 1 AND 2;
 
 -- Padrão específico
 SELECT * FROM tabela WHERE coluna LIKE "_palavra%";
+
+-- Verificar se é NULL
+SELECT * FROM tabela WHERE coluna IS NULL;
+
+-- Verificar se não é NULL
+SELECT * FROM tabela WHERE coluna IS NOT NULL;
 ```
 
 ## IN, AND, OR, NOT
@@ -134,9 +140,6 @@ SELECT * FROM tabela_1 LEFT JOIN tabela_2 ON tabela_1.coluna_x = tabela_2.coluna
 
 -- RIGHT JOIN
 SELECT * FROM tabela_1 RIGHT JOIN tabela_2 ON tabela_1.coluna_x = tabela_2.coluna_y;
-
--- CROSS JOIN
-SELECT * FROM tabela_1 CROSS JOIN tabela_2;
 ```
 
 ## GROUP BY e HAVING

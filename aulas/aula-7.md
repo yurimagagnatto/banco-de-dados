@@ -45,6 +45,27 @@ CREATE TABLE `nome_do_banco_de_dados`.`nome_da_tabela` (
 DROP TABLE `nome_do_banco_de_dados`;
 ```
 
+## Deletar uma coluna de uma tabela
+
+```sql
+ALTER TABLE `nome_do_banco_de_dados`.`tabela`
+DROP COLUMN `coluna`;
+```
+
+## Adicionar uma coluna a uma tabela existente
+
+```sql
+ALTER TABLE `nome_do_banco_de_dados`.`tabela`
+ADD `coluna` INT;
+```
+
+## Modificar uma coluna de uma tabela existente
+
+```sql
+ALTER TABLE `nome_do_banco_de_dados`.`tabela`
+MODIFY COLUMN `coluna` VARCHAR(80);
+```
+
 ## Chave estrangeira
 
 As restrições de chave estrangeira em MySQL ajudam a manter a integridade referencial entre tabelas relacionadas. Aqui está uma explicação das opções ON UPDATE e ON DELETE:
@@ -103,7 +124,27 @@ CREATE TABLE `nome_do_banco_de_dados`.`tabela_2` (
 );
 ```
 
-## Criando uma coluna com índice
+### Adicionar uma chave estrangeira a uma tabela existente
+
+`nome_da_chave_estrangeira` é opcional, caso não seja passado será gerado um nome automáticamente.
+
+```sql
+ALTER TABLE `nome_do_banco_de_dados`.`tabela_2`
+ADD FOREIGN KEY `nome_da_chave_estrangeira` (`tabela_1_id`) REFERENCES `tabela_1` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+```
+
+### Deletar uma chave estrangeira
+
+```sql
+ALTER TABLE `nome_do_banco_de_dados`.`tabela`
+DROP FOREIGN KEY `nome_da_chave_estrangeira`;
+```
+
+## Índice
+
+Os índices em SQL são estruturas de banco de dados que melhoram a velocidade das operações de consulta em tabelas. Eles funcionam de maneira semelhante aos índices em um livro, permitindo que o banco de dados localize rapidamente os dados sem ter que fazer uma varredura completa da tabela.
+
+### Criando uma tabela com uma coluna com índice
 
 ```sql
 CREATE TABLE `nome_do_banco_de_dados`.`tabela` (
@@ -116,70 +157,10 @@ CREATE TABLE `nome_do_banco_de_dados`.`tabela` (
 );
 ```
 
-## Criando uma coluna que armazena registros únicos
-
-```sql
-CREATE TABLE IF NOT EXISTS `nome_do_banco_de_dados`.`tabela` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(80) NOT NULL,
-  `cpf` VARCHAR(11) NOT NULL,
-
-  PRIMARY KEY (`id`),
-
-  UNIQUE (`cpf`)
-);
-```
-
-## Deletar uma coluna de uma tabela
-
-```sql
-ALTER TABLE `nome_do_banco_de_dados`.`tabela`
-DROP COLUMN `coluna`;
-```
-
-## Adicionar uma coluna a uma tabela existente
-
-```sql
-ALTER TABLE `nome_do_banco_de_dados`.`tabela`
-ADD `coluna` INT;
-```
-
-## Modificar uma coluna de uma tabela existente
-
-```sql
-ALTER TABLE `nome_do_banco_de_dados`.`tabela`
-MODIFY COLUMN `coluna` VARCHAR(80);
-```
-
-## Adicionar uma chave estrangeira a uma tabela existente
-
-`nome_da_chave_estrangeira` é opcional, caso não seja passado será gerado um nome automáticamente.
-
-```sql
-ALTER TABLE `nome_do_banco_de_dados`.`tabela_2`
-ADD FOREIGN KEY `nome_da_chave_estrangeira` (`tabela_1_id`) REFERENCES `tabela_1` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-```
-
-## Deletar uma chave estrangeira
-
-```sql
-ALTER TABLE `nome_do_banco_de_dados`.`tabela`
-DROP FOREIGN KEY `nome_da_chave_estrangeira`;
-```
-
-## Índice
-
-### Criar índice
+### Adicionar um índice a uma tabela existente
 
 ```sql
 CREATE INDEX `nome_do_indice`
-ON `nome_do_banco_de_dados`.`tabela` (`coluna`);
-```
-
-### Criar índice único
-
-```sql
-CREATE UNIQUE INDEX `nome_do_indice`
 ON `nome_do_banco_de_dados`.`tabela` (`coluna`);
 ```
 
@@ -194,5 +175,39 @@ DROP INDEX `nome_do_indice`;
 
 ```sql
 CREATE INDEX `nome_do_indice`
+ON `nome_do_banco_de_dados`.`tabela` (`coluna_1`,`coluna_2`);
+```
+
+## Índice único
+
+Um índice único em MySQL garante que os valores em uma ou mais colunas sejam únicos em uma tabela, impedindo a inserção de duplicatas nessas colunas.
+
+### Criando uma tabela com uma coluna que armazena registros únicos
+
+```sql
+CREATE TABLE IF NOT EXISTS `nome_do_banco_de_dados`.`tabela` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(80) NOT NULL,
+  `cpf` VARCHAR(11) NOT NULL,
+
+  PRIMARY KEY (`id`),
+
+  UNIQUE (`cpf`)
+);
+```
+
+### Adicionar um índice único a uma tabela existente
+
+```sql
+CREATE UNIQUE INDEX `nome_do_indice`
+ON `nome_do_banco_de_dados`.`tabela` (`coluna`);
+```
+
+### Criar um índice único composto
+
+Um índice único composto garante que a combinação de valores em duas ou mais colunas seja única em uma tabela, prevenindo a inserção de duplicatas nessas combinações.
+
+```sql
+CREATE UNIQUE INDEX `nome_do_indice`
 ON `nome_do_banco_de_dados`.`tabela` (`coluna_1`,`coluna_2`);
 ```

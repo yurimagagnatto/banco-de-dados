@@ -34,3 +34,11 @@ Caso a condição (WHERE) não seja passada, todos os registros serão alterados
 DELETE FROM `nome_da_tabela`
 WHERE `id` = 1;
 ```
+
+## Truncate
+
+O comando TRUNCATE no SQL é usado para remover rapidamente todos os registros de uma tabela, redefinindo-a ao estado vazio sem afetar sua estrutura.
+
+```sql
+TRUNCATE TABLE nome_da_tabela;
+```
