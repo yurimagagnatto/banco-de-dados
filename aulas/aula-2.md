@@ -8,8 +8,6 @@ A abordagem da teoria relacional de banco de dados se concentra em melhorar a co
 
 Uma tabela relacional é uma estruturação dos dados por assunto, organizada em tabelas com linhas e colunas, e cada linha é a representação de uma ocorrência de um objeto, um assunto, descrita por valores em cada coluna.
 
-IMAGEM
-
 ## Premissas que definem uma tabela de dados
 
 - Cada tabela é chamada de relação.
@@ -71,8 +69,6 @@ Uma tabela pode incluir um conjunto de atributos cujos valores pertencem ao mesm
 - Mantém a consistência do banco de dados, assegurando que as relações entre as tabelas sejam adequadas e respeitadas.
 
 Quando uma coluna em uma tabela (por exemplo, tabela A) é uma chave primária em outra tabela (por exemplo, tabela B), essa coluna na tabela A é considerada uma "chave estrangeira" em relação à mesma coluna na tabela B.
-
-IMAGEM
 
 Esse conceito estabelece uma regra fundamental em bancos de dados relacionais denominada "integridade referencial."
 
