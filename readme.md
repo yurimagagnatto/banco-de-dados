@@ -10,6 +10,16 @@
 
 - [Modelo Lógico - Diagrama Entidade-Relacionamento](/aulas/aula-4.md)
 
+- [Modelo Físico - Implementação do Banco de Dados](/aulas/aula-5.md)
+
+- [SQL](/aulas/aula-6.md)
+
+  - [DDL](/aulas/aula-7.md)
+
+  - [DML](/aulas/aula-8.md)
+
+  - [DQL](/aulas/aula-9.md)
+
 ## Tutorial MySQL / MySQL Workbench
 
 1. [MySQL e MySQL Workbench (instalação)](/aulas/mysql-workbench-1.pdf)
