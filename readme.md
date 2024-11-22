@@ -20,6 +20,10 @@
 
   - [DQL](/aulas/aula-9.md)
 
+## Atividades
+
+- [Eventos](/aulas/eventos.md)
+
 ## Tutorial MySQL / MySQL Workbench
 
 1. [MySQL e MySQL Workbench (instalação)](/aulas/mysql-workbench-1.pdf)
