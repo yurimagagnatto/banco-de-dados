@@ -6,6 +6,8 @@
 
 - [Teoria Relacional](/aulas/aula-2.md)
 
+- [Modelo Conceitual - Diagrama Entidade-Relacionamento](/aulas/aula-3.md)
+
 ## Referências
 
 - MACHADO, F. N. R. BANCO DE DADOS  PROJETO E IMPLEMENTAÇÃO. [s.l.] Saraiva Educação S.A., 2020.
