@@ -123,3 +123,5 @@ Dica: Em relações 1:N (um-para-muitos), a tabela que representa o lado "muitos
 - [O que é um diagrama entidade relacionamento? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-entidade-relacionamento)
 
 - [brModeloWeb](https://app.brmodeloweb.com/)
+
+- [dbdiagram.io](https://dbdiagram.io/)
