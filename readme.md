@@ -8,6 +8,8 @@
 
 - [Modelo Conceitual - Diagrama Entidade-Relacionamento](/aulas/aula-3.md)
 
+- [Modelo Lógico - Diagrama Entidade-Relacionamento](/aulas/aula-4.md)
+
 ## Referências
 
 - MACHADO, F. N. R. BANCO DE DADOS  PROJETO E IMPLEMENTAÇÃO. [s.l.] Saraiva Educação S.A., 2020.
